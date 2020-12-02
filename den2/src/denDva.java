@@ -1018,16 +1018,15 @@ public class denDva {
 
             String[] pismena = idk[4].split("");
 
-            int count = 0;
 
-            for(int j = 0; j < pismena.length; j++){
-                if(pismena[j].equals(pismeno)){
-                    count++;
+
+            if(pismena[nejmene - 1].equals(pismeno) || pismena[nejvice - 1].equals(pismeno)){
+                if(pismena[nejmene - 1].equals(pismeno) && pismena[nejvice - 1].equals(pismeno)){
+
                 }
-            }
-
-            if(count <= nejvice && count >= nejmene){
-                finalCount++;
+                else{
+                    finalCount++;
+                }
             }
 
         }
