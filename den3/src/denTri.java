@@ -342,7 +342,7 @@ public class denTri {
 
 
 
-
+        
             for(int i = 0; i < inputInput.length;i++){
                 if(symbol >= inputInput[row].length) {
                     symbol = symbol - inputInput[row].length;
@@ -350,9 +350,10 @@ public class denTri {
                 if(inputInput[row][symbol].equals("#")){
                         stromy++;
                     }
-                    row++;
-                    symbol += 3;
+                    row += 2;
+                    symbol ++;
             }
+
             System.out.println(stromy);
 
 
