@@ -340,23 +340,17 @@ public class denTri {
         int row = 0;
         int symbol = 0;
 
-
-
-        
-            for(int i = 0; i < inputInput.length;i++){
-                if(symbol >= inputInput[row].length) {
-                    symbol = symbol - inputInput[row].length;
-                }
-                if(inputInput[row][symbol].equals("#")){
-                        stromy++;
-                    }
-                    row += 2;
-                    symbol ++;
+        for(int i = 0; i < inputInput.length;i++){
+            if(symbol >= inputInput[row].length) {
+                symbol = symbol - inputInput[row].length;
             }
+            if(inputInput[row][symbol].equals("#")){
+                stromy++;
+            }
+            row += 1;
+            symbol ++;
+        }
 
-            System.out.println(stromy);
-
-
-
+        System.out.println(stromy);
     }
 }
