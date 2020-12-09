@@ -1005,6 +1005,8 @@ public class denDevet {
 
             String[] bruh = idk.split("\n");
 
+            long firstFinal = 0;
+
             long[] input = new long[bruh.length];
             for(int i = 0; i < bruh.length;i++){
                 input[i] = Long.parseLong(bruh[i]);
@@ -1024,6 +1026,7 @@ public class denDevet {
                     }
                 }
                 if(!isEqual){
+                    firstFinal = input[i];
                     System.out.println("první odpověď " + input[i]);
                     break;
                 }
@@ -1031,5 +1034,32 @@ public class denDevet {
                    isEqual = false;
                 }
             }
+
+            //Část 2
+            long meziSoucet = 0;
+
+          for(int i = 0; i < input.length;i++){
+              meziSoucet = input[i];
+              long smallest = input[i];
+              long biggest = input[i];
+              for(int j = i + 1; j < input.length;j++){
+                  meziSoucet += input[j];
+                  if(biggest < input[j]){
+                      biggest = input[j];
+                  }
+                  else if(smallest > input[j]){
+                      smallest = input[j];
+                  }
+
+                  if(meziSoucet > firstFinal){
+                      break;
+                  }
+                  else if(meziSoucet == firstFinal){
+
+                      System.out.println("druhá odpověď " + (biggest + smallest));
+                      break;
+                  }
+              }
+          }
     }
 }
